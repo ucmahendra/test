@@ -1,0 +1,21 @@
+﻿<header class="page-header">
+    <div class="container">
+        <!-- [Breadcrumb Navigation] -->
+        @Html.Sitecore().Placeholder("pageheader")
+        <!-- [/Breadcrumb Navigation] -->
+    </div>
+</header>
+<section class="page-header">
+    <div class="container">
+        <!-- [Two Columns] -->
+        <div class="row">
+            <div class="col-lg-4">
+                @Html.Sitecore().DynamicPlaceholder("sidecontent")
+            </div>
+            <div class="col-lg-8">
+                @Html.Sitecore().Placeholder("pagecontent")
+            </div>
+        </div>
+        <!-- [/Two Columns] -->
+    </div>
+</section>

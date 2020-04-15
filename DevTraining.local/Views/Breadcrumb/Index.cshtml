@@ -1,0 +1,11 @@
+﻿@model List<DevTraining.local.Models.NavigationItem>
+
+<ol class="breadcrumb">
+    @foreach (var navItem in Model)
+    {
+        if (navItem.Active)
+        {
+            <li><a href="@navItem.URL">@navItem.Title</a></li>
+        }
+    }
+</ol>

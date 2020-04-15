@@ -1,0 +1,13 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+    var calloutDatasource = Sitecore.Context.Database.GetItem(Model.Rendering.DataSource);
+}
+
+<div class="@Model.Rendering.Parameters["CssClass"] side-widget">
+    <div>
+        @Html.Sitecore().Field("body", calloutDatasource)
+    </div>
+    <h4 class="text-uppercase">@Html.Sitecore().Field("Title", calloutDatasource)</h4>
+</div>
